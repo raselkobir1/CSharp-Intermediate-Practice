@@ -11,8 +11,10 @@ namespace CSharpIntermediate
             Student student1 = new Student("Rasel", "Kabir");  // constructor overloading
 
             Console.WriteLine(student1.GetFullName());
+            Console.WriteLine(student1.PartialClassExample());
             Console.ReadLine(); 
             
+
         }
     }
 }
