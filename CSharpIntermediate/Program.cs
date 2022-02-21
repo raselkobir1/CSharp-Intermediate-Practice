@@ -1,5 +1,6 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
+using CSharpIntermediate.StaticClassAndMethod;
 using System;
 
 namespace CSharpIntermediate
@@ -22,13 +23,16 @@ namespace CSharpIntermediate
             studentProp.Name = "David"; // call to a set block of the name property
             studentProp.LastName = "Dauni";
 
+            //----------------------Static class and method 
 
+            string word = "football";
+            string newWord = TestClass.FirstLetterUpperCase(word);
+            Console.WriteLine(newWord);
 
-
-
-
-
-            Console.ReadLine(); 
+            //Extension method and use of extension method
+            string word1 = "umbrella".FirstLetterUpperCase(); ;
+            Console.WriteLine(word1);
+            Console.ReadLine();  
             
 
         }

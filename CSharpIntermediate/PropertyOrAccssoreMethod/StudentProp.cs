@@ -65,3 +65,10 @@ namespace CSharpIntermediate.PropertyOrAccssoreMethod
         public string Name1 { get; set; }
     }
 }
+
+
+
+
+
+
+
