@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpIntermediate.ClassAndConstructor;
+using System;
 
 namespace CSharpIntermediate
 {
@@ -6,7 +7,12 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Student student = new Student();  //default constructor
+            Student student1 = new Student("Rasel", "Kabir");  // constructor overloading
+
+            Console.WriteLine(student1.GetFullName());
+            Console.ReadLine(); 
+            
         }
     }
 }
