@@ -50,6 +50,11 @@ namespace CSharpIntermediate
             //result for this class 10 and 45 and its right for class.
             //But if we change our Test class to be a structure and then inspect the result, we will see 10 and 10.
 
+            //----------------------ENUM---------------------------
+            Console.WriteLine("----------------ENUM--------------");
+            DayOfWeek friday = DayOfWeek.Friday;
+            Console.WriteLine(friday);
+            Console.WriteLine((int)friday);
 
             Console.ReadLine();
         }
