@@ -1,6 +1,7 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
 using CSharpIntermediate.StaticClassAndMethod;
+using CSharpIntermediate.Structure;
 using System;
 
 namespace CSharpIntermediate
@@ -32,9 +33,25 @@ namespace CSharpIntermediate
             //Extension method and use of extension method
             string word1 = "umbrella".FirstLetterUpperCase(); ;
             Console.WriteLine(word1);
-            Console.ReadLine();  
             
 
+            //----------------------STRUCTURE---------------------------
+            Console.WriteLine("----------------STRUCTURE--------------");
+
+            Time time = new Time(3, 30, 25);
+            time.PrintTime();
+
+            Test test = new Test(10);
+            Console.WriteLine(test.Number);
+
+            test.ChangeNumber(test);
+            Console.WriteLine(test.Number);
+
+            //result for this class 10 and 45 and its right for class.
+            //But if we change our Test class to be a structure and then inspect the result, we will see 10 and 10.
+
+
+            Console.ReadLine();
         }
     }
 }
