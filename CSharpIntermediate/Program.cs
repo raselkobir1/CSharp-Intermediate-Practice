@@ -1,5 +1,6 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
 using CSharpIntermediate.Inheritance;
+using CSharpIntermediate.Interface;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
 using CSharpIntermediate.StaticClassAndMethod;
 using CSharpIntermediate.Structure;
@@ -79,6 +80,26 @@ namespace CSharpIntermediate
 
             //XMLWriter xMLWriter1 = writer1 as XMLWriter;
             //xMLWriter1.FormatXMLFile();
+
+            //----------------------Interface---------------------------
+            Console.WriteLine("----------------Interface--------------");
+
+            XmlWritterIC xmlWritterIC = new XmlWritterIC();
+            xmlWritterIC.SetName();
+            xmlWritterIC.WriteFile();
+
+            IWriter xmlWIC = new XmlWritterIC();
+            xmlWIC.WriteFile();
+            //xmlWIC.SetName(); //error - the setName methdo is not part of the Iwriter interface.
+
+            XmlWritterIC xmlFile = new XmlWritterIC();
+            JsonWriter jsonWriter = new JsonWriter();
+
+            XmlFileWriter xmlFileWriter = new XmlFileWriter(xmlFile);
+            xmlFileWriter.Write();
+
+            xmlFileWriter = new XmlFileWriter(jsonWriter);
+            xmlFileWriter.Write();
 
 
 

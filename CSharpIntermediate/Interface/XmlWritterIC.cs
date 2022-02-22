@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CSharpIntermediate.Interface
 {
 
-    public class XmlWritter : FileBase, IWriter
+    public class XmlWritterIC : FileBase, IWriter  
     {
         public void WriteFile()
         {
