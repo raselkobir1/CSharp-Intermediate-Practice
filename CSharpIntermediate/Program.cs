@@ -1,4 +1,5 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
+using CSharpIntermediate.Inheritance;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
 using CSharpIntermediate.StaticClassAndMethod;
 using CSharpIntermediate.Structure;
@@ -55,6 +56,31 @@ namespace CSharpIntermediate
             DayOfWeek friday = DayOfWeek.Friday;
             Console.WriteLine(friday);
             Console.WriteLine((int)friday);
+
+            //----------------------Inheritance---------------------------
+            Console.WriteLine("----------------Inheritance--------------");
+            JSONWriter jSONWriter = new JSONWriter("jsonFileName");
+            jSONWriter.FormatJSONFile();
+            jSONWriter.Write();
+
+            XMLWriter xMLWriter = new XMLWriter("xmlFileName");
+            xMLWriter.Write();
+            xMLWriter.FormatXMLFile();
+
+            XMLWriter xml = new XMLWriter("xml writer");
+            Writer writer = xml;
+            writer.Write();
+            //writer.FormatXML();  //error:  FormatXML is not part of writer class
+
+            Writer writer1 = new Writer("Writer");
+            //XMLWriter xML = writer1;  //error
+
+            //But we can solve this problem by using the “as” keyword:
+
+            //XMLWriter xMLWriter1 = writer1 as XMLWriter;
+            //xMLWriter1.FormatXMLFile();
+
+
 
             Console.ReadLine();
         }
