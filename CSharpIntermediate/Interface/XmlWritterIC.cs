@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CSharpIntermediate.Interface
 {
 
-    public class XmlWritterIC : FileBase, IWriter  
+    public class XmlWritterIC : FileBase, IWriter, IFormatter
     {
         public void WriteFile()
         {
@@ -17,6 +17,11 @@ namespace CSharpIntermediate.Interface
         {
             base.SetName();
             Console.WriteLine("Setting name in the XmlWriter class.");
+        }
+
+        public void FormatFile()
+        {
+            Console.WriteLine("Formatting file in XmlWriter class.");
         }
     }
     public class JsonWriter : FileBase, IWriter

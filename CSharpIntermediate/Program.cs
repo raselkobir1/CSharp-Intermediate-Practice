@@ -92,6 +92,7 @@ namespace CSharpIntermediate
             xmlWIC.WriteFile();
             //xmlWIC.SetName(); //error - the setName methdo is not part of the Iwriter interface.
 
+
             XmlWritterIC xmlFile = new XmlWritterIC();
             JsonWriter jsonWriter = new JsonWriter();
 
