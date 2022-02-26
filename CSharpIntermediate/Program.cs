@@ -3,7 +3,8 @@ using CSharpIntermediate.Generic;
 using CSharpIntermediate.Inheritance;
 using CSharpIntermediate.Interface;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
-using CSharpIntermediate.Queue;
+using CSharpIntermediate.QueueCollection;
+using CSharpIntermediate.StackCollection;
 using CSharpIntermediate.StaticClassAndMethod;
 using CSharpIntermediate.Structure;
 using System;
@@ -137,10 +138,14 @@ namespace CSharpIntermediate
             studentInfo.GetFullName<Generic.Student>(s);
 
             //----------------------Queue---------------------------
-            Console.WriteLine("----------------Queue--------------");
+            Console.WriteLine("\n----------------Queue--------------");
             QueueExample quequ = new QueueExample();
             quequ.GetResultFromQueObject();
 
+            //----------------------Stack---------------------------
+            Console.WriteLine("\n----------------Stack--------------");
+            StackExample stack = new StackExample();
+            stack.GetStackResult();
 
             Console.ReadLine();
         }

@@ -1,15 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpIntermediate.Queue
+namespace CSharpIntermediate.QueueCollection 
 {
     public class QueueExample
     {
         public void GetResultFromQueObject()
         {
+            //QUEQU : FIFO -> first in first out
+
+            //not generic
+            Queue queue = new Queue();
+            queue.Enqueue("Rasel");
+            queue.Enqueue(10);
+            queue.Enqueue(20.55);
+            queue.Enqueue(true);
+
+            //generic collection
             Queue<int> queueCollection = new Queue<int>();
             queueCollection.Enqueue(10);
             queueCollection.Enqueue(20);
