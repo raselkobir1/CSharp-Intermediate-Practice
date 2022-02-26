@@ -1,5 +1,6 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
 using CSharpIntermediate.Generic;
+using CSharpIntermediate.HashTableCollection;
 using CSharpIntermediate.Inheritance;
 using CSharpIntermediate.Interface;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
@@ -146,6 +147,13 @@ namespace CSharpIntermediate
             Console.WriteLine("\n----------------Stack--------------");
             StackExample stack = new StackExample();
             stack.GetStackResult();
+
+            //----------------------HashTable---------------------------
+            Console.WriteLine("\n----------------HashTable--------------");
+            HashTableExaample hashTable = new HashTableExaample();
+            hashTable.GetValueFromHashtable();
+
+
 
             Console.ReadLine();
         }

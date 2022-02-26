@@ -21,3 +21,5 @@ namespace CSharpIntermediate.Structure
         }
     }
 }
+
+//struct value type and class reference type
