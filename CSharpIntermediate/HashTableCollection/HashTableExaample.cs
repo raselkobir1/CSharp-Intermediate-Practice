@@ -28,6 +28,13 @@ namespace CSharpIntermediate.HashTableCollection
             if(hashtable.ContainsKey(Element.Name))
                 Console.WriteLine("Name- " +hashtable[Element.Name]);
 
+            Console.WriteLine();
+            Console.WriteLine("Remove value from third no key");
+            hashtable.Remove(Element.Third);
+            foreach (var key in hashtable.Keys)
+            {
+                Console.WriteLine($"Key: {key}, value: {hashtable[key]}");
+            }
         }
     }
 }
