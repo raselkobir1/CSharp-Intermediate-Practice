@@ -1,10 +1,13 @@
 ﻿using CSharpIntermediate.ClassAndConstructor;
+using CSharpIntermediate.Generic;
 using CSharpIntermediate.Inheritance;
 using CSharpIntermediate.Interface;
 using CSharpIntermediate.PropertyOrAccssoreMethod;
+using CSharpIntermediate.Queue;
 using CSharpIntermediate.StaticClassAndMethod;
 using CSharpIntermediate.Structure;
 using System;
+using Student = CSharpIntermediate.ClassAndConstructor.Student;
 
 namespace CSharpIntermediate
 {
@@ -102,6 +105,41 @@ namespace CSharpIntermediate
             xmlFileWriter = new XmlFileWriter(jsonWriter);
             xmlFileWriter.Write();
 
+            //----------------------Generic---------------------------
+            Console.WriteLine("----------------Generic--------------");
+
+            CollectionInitializer<int> initilizer = new CollectionInitializer<int>(7);
+
+            initilizer.AddElementsToCollection(5, 8, 7, 6, 3, 9);
+            int[] collection = initilizer.RetriveAllElements();
+            int number = initilizer.RetriveElementOnIntex(3);
+
+            foreach (var item in collection)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Element on the selected index is : {number}");
+
+            KeyValuePair<int, string> keyValuePair = new KeyValuePair<int, string>();
+            keyValuePair.Key = 10;
+            keyValuePair.Value = "Rasel Kabir";
+            keyValuePair.PrintKeyValue();
+
+            Generic.Student s = new Generic.Student
+            {
+                FirstName = "Rasel",
+                LastName = "Kabir"
+
+            };
+
+            StudentInfo<Student> studentInfo = new StudentInfo<Student>();
+            studentInfo.GetFullName<Generic.Student>(s);
+
+            //----------------------Queue---------------------------
+            Console.WriteLine("----------------Queue--------------");
+            QueueExample quequ = new QueueExample();
+            quequ.GetResultFromQueObject();
 
 
             Console.ReadLine();
